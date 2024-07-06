@@ -1,0 +1,189 @@
+========== HEADER ==========
+.nav__logo-circle
+D
+
+.nav__logo-name
+Duong T. Dao.
+
+.nav__title
+Menu
+
+.nav__name
+Duong
+
+.nav__link
+Home - About Me - Projects - Contact Me
+
+
+========== HOME ==========
+.home__name
+Duong T. Dao
+
+.home__social-link
+https://www.instagram.com/ddduong__/
+https://www.linkedin.com/in/thuy-duong-dao-6781bb1b4/
+https://github.com/DuongDao146
+
+.home__description
+<b>Project manager/BI Analyst</b>, with knowledge in project 
+management and data analytics, I deliver insightful, data-driven 
+results to drive success and efficiency.
+
+.home__scroll-text
+Scroll Down
+
+
+========== ABOUT ==========
+.section__title-1
+About Me.
+
+.about__description
+Hello there! I’m <b>Thuy Duong Dao<\b>, but you can call me <b>Annie<\b>. 
+I was born in Hanoi, the capital city of Vietnam.
+
+My academic journey began at Foreign Trade University (Hanoi), where I 
+earned my bachelor's degree. 
+After graduation, I stepped into the banking sector as a 
+Project Management Officer, where I learned the ropes of 
+managing projects and making impactful, data-driven decisions. 
+Now in Singapore, I’m furthering my studies with a Master’s 
+degree and have created this website to share my journey and 
+document the insights and experiences that shape my 
+professional path.
+
+.about__item
+<b>My Skills Are:</b> HTML, CSS, JavaScript, 
+React, Git & GitHub, Bootstrap, Flutter & 
+Figma.
+
+.button
+Contact Me
+
+.button__ghost
+https://www.linkedin.com/
+
+
+========== SERVICES ==========
+.section__title-2
+Services.
+
+.services__title .services__description
+Project management
+I oversee and coordinate projects to ensure timely 
+and successful delivery. With a focus on clear 
+communication, goal alignment, and resource optimization, 
+I manage project workflows using a blend of agile and 
+traditional methodologies.
+
+Data analytics, visualization, and reporting
+I transform raw data into meaningful insights through 
+advanced analytics and visualization techniques. I also 
+provide comprehensive reports and dashboards that helps 
+businesses understand their data, uncover trends, and 
+make informed decisions.
+
+Data-driven decision support
+Beyond data analytics, I also offer in-depth analysis and 
+strategic recommendations. This focuses on interpreting 
+complex data sets (using results from data analytics) to 
+guide business strategies and operational improvements.​
+
+
+========== PROJECTS ==========
+.section__title-1
+Projects.
+
+.projects__subtitle 
+Website
+App
+
+.projects__title 
+Restaurant Website
+Yoga App
+Fast Food App
+Coffee Delivery Website
+Barbershop Website
+
+.projects__description
+Project that you carry out in the design 
+and structure of the layout, showing the 
+design at the client's request.
+
+.projects__link
+View
+
+https://github.com/
+https://dribbble.com/
+
+========== CONTACT ==========
+.section__title-2
+Contact Me.
+
+.contact__description-1
+I will read all emails. Send me any 
+message you want and I'll get back to you.
+
+.contact__description-2
+I need your <b>Name</b> and <b>Email Address</b>, but 
+you won't receive anything other than your reply.
+
+.contact__title
+Send Me A Message 
+
+.contact__label - placeholder
+First Name 
+Email Address
+Subject
+Message
+
+.contact__button
+Send Message
+
+.contact__social-description-1
+Does not send emails
+
+.contact__social-description-2
+Write me on my social networks
+
+.contact__social-link
+https://www.facebook.com/
+https://www.instagram.com/
+https://www.linkedin.com/
+
+
+========== CONTACT JS ==========
+// serviceID - templateID - #form - publicKey
+
+   // Show sent message
+      Message sent successfully ✅
+
+   // Remove message after five seconds
+
+   // Clear input fields
+
+   // Show error message
+      Message not sent (service error) ❌
+
+Subject *
+New message from {{user_name}}
+
+Content *
+Names: {{user_name}}
+
+Email: {{user_email}}
+
+Subject: {{user_subject}}
+
+Message: {{user_message}}
+
+Best wishes,
+EmailJS team
+
+
+========== FOOTER ==========
+.footer__links
+Home - About - Projects
+
+.footer__copy
+&#169; All Rights Reserved By 
+<a href="#">Bedimcode.</a>
