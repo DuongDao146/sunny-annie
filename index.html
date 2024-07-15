@@ -5,13 +5,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+      <link rel="shortcut icon" href="assets\img\favicon-32x32.png" type="image/x-icon">
 
       <!--=============== REMIXICONS ===============-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
+
+      <!--=============== GASP PLUGIN ===============-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
       <title>Sunny-Annie - Thuy Duong Dao's portfolio</title>
    </head>
@@ -26,10 +30,9 @@
          <nav class="nav container">
 
             <!-- Logo section -->
-            <a href="#" class="nav__logo">
+            <a href="#" class="nav__logo hover-effect">
                <img src="assets/img/logo.png" alt="" class="nav__logo-icon">
-               <!-- <span class="nav__logo-circle">D</span> -->
-               <span class="nav__logo-name">Sunny-Annie.</span>
+               <h2 class="nav__logo-name"><b>Sunny-Annie.</b></h2>
             </a>
 
             <!-- In-menu section -->
@@ -41,19 +44,27 @@
                <!-- Navigation links -->
                <ul class="nav__list">
                   <li class="nav__item">
-                     <a href="#home" class="nav__link active-link">Home</a>
+                     <a href="#home" class="nav__link active-link hover-effect">Home</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#about" class="nav__link">About Me</a>
+                     <a href="#about" class="nav__link hover-effect">About Me</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#projects" class="nav__link">Projects</a>
+                     <a href="#experience" class="nav__link hover-effect">Experiences</a>
                   </li>
 
                   <li class="nav__item">
-                     <a href="#contact" class="nav__link nav__link-button">Contact</a>
+                     <a href="#services" class="nav__link hover-effect">Skills</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link hover-effect">Projects</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link nav__link-button hover-effect">Contact</a>
                   </li>
                </ul>
 
@@ -87,8 +98,8 @@
             <div class="home__container container grid">
 
                <!-- Home name -->
-               <h1 class="home__name">
-                  Duong T. Dao
+               <h1 class="home__name hover-effect">
+                  <a href="#contact" class="home__name">Duong T. Dao</a>
                </h1>
 
                <!-- Home profile -->
@@ -96,27 +107,28 @@
 
                   <!-- Profile image -->
                   <div class="home__image">
-                     <img src="assets/img/home-perfil-BW.jpg" alt="image" class="home__img">
+                     <img src="assets/img/home-perfil.jpg" alt="image" class="home__img hover-effect">
                      <div class="home__shadow"></div>
 
-                     <img src="assets/img/curved-arrow.svg" alt="image" class="home__arrow">
-                     <img src="assets/img/random-lines.svg" alt="image" class="home__line">
+                     <img src="assets/img/lines-home.svg" alt="image" class="home__line">
 
-                     <div class="geometric-box"></div>
+                     <div class="sparkle-container">
+                        <i class="ri-sparkling-fill"></i>
+                     </div>
                   </div>
 
                   <!-- Social links -->
                   <div class="home__social">
-                     <a href="https://www.instagram.com/ddduong__/" target="_blank" class="home__social-link">
-                        <i class="ri-instagram-line"></i>
+                     <a href="https://www.instagram.com/ddduong__/" target="_blank" class="home__social-link hover-effect">
+                        <i class="ri-instagram-fill"></i>
                      </a>
 
-                     <a href="https://www.linkedin.com/in/thuy-duong-dao-6781bb1b4/" target="_blank" class="home__social-link">
-                        <i class="ri-linkedin-box-line"></i>
+                     <a href="https://www.linkedin.com/in/thuy-duong-dao-6781bb1b4/" target="_blank" class="home__social-link hover-effect">
+                        <i class="ri-linkedin-box-fill"></i>
                      </a>
 
-                     <a href="https://github.com/DuongDao146" target="_blank" class="home__social-link">
-                        <i class="ri-github-line"></i>
+                     <a href="https://github.com/DuongDao146" target="_blank" class="home__social-link hover-effect">   
+                        <i class="ri-github-fill"></i>
                      </a>
                   </div>
                </div>
@@ -133,7 +145,7 @@
 
                   <!-- Scroll down button -->
                   <a href="#about" class="href home__scroll">
-                     <div class="home__scroll-box">
+                     <div class="home__scroll-box hover-effect">
                         <i class="ri-arrow-down-s-line"></i>
                      </div>
 
@@ -150,22 +162,17 @@
             <div class="about__container container grid">
 
                <!-- About title -->
-               <h2 class="section__title-1">
-                  <span>About Me.</span>
+               <h2 class="section__title-1 hover-effect">
+                  <a href="#experience" class="section__title-1">About Me.</a>
                </h2>
-
+               
                <!-- About profile -->
                <div class="about__perfil">
 
                   <!-- Profile image -->
-                  <div class="about__image">
+                  <div class="about__image  hover-effect">
                      <img src="assets/img/about-perfil.jpg" alt="image" class="about__img">
-                     
-                     <div class="about__shadow"></div>
-
-                     <div class="geometric-box"></div>
-                     <img src="assets/img/random-lines.svg" alt="" class="about__line">
-                     <div class="about__box"></div>
+                     <img src="assets/img/lines-about.svg" class="about__line">
                   </div>
                </div>
 
@@ -175,7 +182,7 @@
                   <!-- Description -->
                   <p class="about__description">
                      Hello there! I’m <b>Annie</b>. My Vietnamese name is <b>Dao Thuy Duong</b> 
-                     <i>(my given name - "Duong" - means Sun)</i> 🌞. 
+                     (my given name - "Duong" - means Sun) 🌞. 
                      I was born in Hanoi, the capital city of Vietnam.</br> 
                      </br>My academic journey began at Foreign Trade University (Hanoi), 
                      where I earned my bachelor's degree.
@@ -188,254 +195,201 @@
                      document the experiences that shape my 
                      professional path.
                   </p>
-
-                  <!-- Skills -->
-                  <ul class="about__list">
-                     <span><b>My skills:</b></span>
-                     <li class="about__item">
-                        Agile Project Management (SDLC, JIRA, Confluence, MS Project, MS Visio);
-                     </li>
-
-                     <li class="about__item">
-                        Data Analysis & Visualization (MS PowerPoint, Excel, Power BI; 
-                        JIRA Dashboard/JQL; IBM Cognos; Weka; Python; SQL);
-                     </li>
-
-                     <li class="about__item">
-                        And also some HTML, CSS after creating my own portfolio :">.
-                     </li>
-                  </ul>
                   
                   <!-- Contact buttons -->
                   <div class="about__buttons">
-                     <a href="contact" class="button">
-                        <i class="ri-send-plane-line"></i> Contact Me
-                     </a>
-
-                     <a href="https://www.linkedin.com/in/thuy-duong-dao-6781bb1b4/" target="_blank" class="button__ghost">
-                        <i class="ri-linkedin-box-line"></i>
+                     <a href="#contact" class="button hover-effect">
+                        <i class="ri-send-plane-line">
+                           <span>Let's get in touch!</span>
+                        </i>
                      </a>
                   </div>
                </div>
             </div>
          </section>
 
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-
-            <!-- Services title -->
-            <h2 class="section__title-2">
-               <span>Services.</span>
+         <!--==================== EXPERIENCES ====================-->
+         <section class="experience section" id="experience">
+            <h2 class="section__title-1 hover-effect">
+               <a href="#services" class="section__title-1">Where I worked.</a>
             </h2>
 
-            <!-- Services container -->
-            <div class="services__container container grid">
+            <div class="experience__container container">
+               <div class="experience__content">
+                  <div class="experience__timeline">
+                        <div class="experience__item">
+                           <div class="experience__date">Apr 2022 – Aug 2023</div>
+                           <div class="experience__line">
+                              <div class="experience__line-inner"></div>
+                           </div>
+                           <div class="experience__dot"></div>
+                           <div class="experience__info">
+                              <h3 class="experience__title">Vietnam Prosperity Joint Stock Commercial Bank (VPBANK)</h3>
+                              <h4 class="experience__subtitle">Project Management Officer, Integrated Risk Management Center (IRMC), Risk Management Department (RMD)</h4>
+                              <ul class="experience__list">
+                                    <li>Oversaw technical teams and executed project management tasks within RMD.</li>
+                                    <li>Created IRMC’s Software Development Life Cycle (SDLC) process which is still under implementation.</li>
+                                    <li>Enhanced workload management tools to optimize task allocation across technical teams.</li>
+                                    <li>Enhanced IRMC’s sprint progress reporting by introducing a more effective burndown chart which can identify out-of-scope planning.</li>
+                              </ul>
+                           </div>
+                        </div>
 
-               <!-- Service card 1 -->
-               <article class="services__card">
-
-                  <div class="services__border"></div>
-
-                  <div class="services__content">
-                     <div class="services__icon">
-                        <div class="services__box"></div>
-                        <i class="ri-dashboard-line"></i>
-                     </div>
-
-                     <h2 class="services__title">Project management</h2>
-
-                     <p class="services__description">
-                        I oversee and coordinate projects to ensure timely 
-                        and successful delivery. With a focus on clear 
-                        communication, goal alignment, and resource optimization, 
-                        I manage project workflows using a blend of agile and 
-                        traditional methodologies.
-                     </p>
+                        <div class="experience__item">
+                           <div class="experience__date">Oct 2022 – Dec 2022</div>
+                           <div class="experience__line">
+                              <div class="experience__line-inner"></div>
+                           </div>
+                           <div class="experience__dot"></div>
+                           <div class="experience__info">
+                              <h3 class="experience__title">Vietnam Technological and Commercial Joint Stock Bank (TCB)</h3>
+                              <h4 class="experience__subtitle">Business Service and Operation (BSO) Intern</h4>
+                              <ul class="experience__list">
+                                    <li>Assisted in the operation of Business Banking products and SME import - export activities.</li>
+                              </ul>
+                           </div>
+                        </div>
                   </div>
-               </article>
-               
-               <!-- Service card 2 -->
-               <article class="services__card">
+               </div>
 
-                  <div class="services__border"></div>
-
-                  <div class="services__content">
-                     <div class="services__icon">
-                        <div class="services__box"></div>
-                        <i class="ri-bar-chart-2-line"></i>
-                     </div>
-
-                     <h2 class="services__title">Data analytics, visualization, and reporting</h2>
-
-                     <p class="services__description">
-                        I transform raw data into meaningful insights through 
-                        advanced analytics and visualization techniques. I also 
-                        provide comprehensive reports and dashboards that helps 
-                        businesses understand their data, uncover trends, and 
-                        make informed decisions.
-                     </p>
-                  </div>
-               </article>
-
-               <!-- Service card 3 -->
-               <article class="services__card">
-
-                  <div class="services__border"></div>
-
-                  <div class="services__content">
-                     <div class="services__icon">
-                        <div class="services__box"></div>
-                        <i class="ri-presentation-line"></i>
-                     </div>
-
-                     <h2 class="services__title">Data-driven decision support</h2>
-
-                     <p class="services__description">
-                        Beyond data analytics, I also offer in-depth analysis and 
-                        strategic recommendations. This focuses on interpreting 
-                        complex data sets (using results from data analytics) to 
-                        guide business strategies and operational improvements.
-                     </p>
-                  </div>
-               </article>
+               <!-- View resume button -->
+               <div class="experience__button-container experience__button">
+                  <a href="assets\docs\Resume_June 2024_Dao Thuy Duong.pdf" target="_blank" class="button hover-effect">
+                     <span>View my résumé</span>
+                     <i class="ri-arrow-right-up-line"></i>
+                  </a>
+               </div>
             </div>
          </section>
-
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            <h2 class="section__title-1">
-               <span>Stuff I built.</span>
+         
+         <!--==================== SERVICES ====================-->
+         <section class="services section" id="services">
+            <h2 class="section__title-1 hover-effect">
+               <a href="#projects" class="section__title-1">What I do.</a>
             </h2>
 
-            <div class="projects__container container grid">
-               <article class="projects__card">
-                  <div class="projects__number">01.</div>
-                  <div class="projects__media-wrapper">
-                     <video src="assets/vid/project-1.mp4" muted class="projects__video-bg"></video>
-                     <div class="projects__content">
-                        <h3 class="projects__subtitle">IBM Cognos Dashboard</h3>
-                        <h2 class="project__title">Current/Future Technology Trend</h2>
+            <div class="services__container container">
+
+               <div class="services__menu">
+                  <h1 class="service__title-wrapper active-service hover-effect" data-target="service1">
+                     <span class="service__title">Project Management <i class="ri-arrow-right-down-line"></i></span>
+                  </h1>
+
+                  <h1 class="service__title-wrapper hover-effect" data-target="service2">
+                     <span class="service__title">Data Analytics & Visualization <i class="ri-arrow-right-down-line"></i></span>
+                  </h1>
+
+                  <h1 class="service__title-wrapper hover-effect" data-target="service3">
+                     <span class="service__title">Data-driven Analysis <i class="ri-arrow-right-down-line"></i></span>
+                  </h1>
+               </div>
+
+               <div class="services__details">
+                  <!-- Project Management -->
+                  <div class="service__content service1 active">
+                     <img src="assets/img/service-1-gif.gif" alt="Project Management" class="service__gif hover-effect">
+                     <p>I oversee and coordinate projects to ensure timely and 
+                        successful delivery. With a focus on clear communication, 
+                        goal alignment, and resource optimization, I manage project 
+                        workflows using a blend of agile and traditional 
+                        methodologies.</p>
+                     <div class="service__skills">
+                        <span class="skill">Agile</span>
+                        <span class="skill">Scrum</span>
+                        <span class="skill">SDLC</span>
+                        <span class="skill">JIRA</span>
+                        <span class="skill">Confluence</span>
+                        <span class="skill">MS Project</span>
+                        <span class="skill">MS Visio</span>
                      </div>
                   </div>
-               </article>
 
-               <article class="projects__card">
-                  <div class="projects__number">02.</div>
-                  <div class="projects__media-wrapper">
-                     <video src="assets/vid/project-2.mp4" muted class="projects__video-bg"></video>
-                     <div class="projects__content">
-                        <h3 class="projects__subtitle">Excel Dashboard</h3>
-                        <h2 class="project__title">Accommodation Pricing</h2>
+                  <!-- Data Analytics -->
+                  <div class="service__content service2">
+                     <img src="assets/img/service-2-gif.gif" alt="Data Analytics GIF" class="service__gif hover-effect">
+                     <p>I transform raw data into meaningful insights through 
+                        advanced analytics and visualization techniques. 
+                        I also provide comprehensive reports and dashboards 
+                        that help businesses understand their data, uncover 
+                        trends, and make informed decisions.</p>
+                     <div class="service__skills">
+                        <span class="skill">Excel</span>
+                        <span class="skill">Power BI</span>
+                        <span class="skill">Tableau</span>
+                        <span class="skill">IBM Cognos</span>
+                        <span class="skill">Weka</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">SQL</span>
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
                      </div>
                   </div>
-               </article>
 
-               <article class="projects__card">
-                  <div class="projects__number">03.</div>
-                  <div class="projects__media-wrapper">
-                     <video src="assets/vid/project-3.mp4" muted class="projects__video-bg"></video>
-                     <div class="projects__content">
-                        <h3 class="projects__subtitle">Some minimalistic work of mine</h3>
-                        <h2 class="project__title">Other data/visualization work</h2>
+                  <!-- Decision Support -->
+                  <div class="service__content service3">
+                     <img src="assets/img/service-3-gif.gif" alt="Decision Support GIF" class="service__gif hover-effect">
+                     <p>Beyond data analytics, I offer in-depth analysis and 
+                        strategic recommendations. This focuses on interpreting 
+                        complex data sets to guide business strategies and 
+                        operational improvements.</p>
+                     <div class="service__skills">
+                        <span class="skill">PowerPoint</span>
+                        <span class="skill">Communication</span>
+                        <span class="skill">Problem solving</span>
                      </div>
                   </div>
-               </article>
+               </div>
+            </div>
+        </section>
+        
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h2 class="section__title-1 hover-effect">
+               <a href="#contact" class="section__title-1">Stuff I Built.</a>
+            </h2>
 
-               
+            <div class="projects__container container">
+               <div class="projects__controls">
+                  <i class="ri-arrow-left-circle-line projects__arrow" id="prev-video"></i>
+                  <i class="ri-arrow-right-circle-line projects__arrow" id="next-video"></i>
+               </div>
 
-               <!-- <article class="projects__card">
-                  <div class="projects__image">
-                     <img src="assets/img/project-3.jpg" alt="image" class="projects__img">
-                     
-                     <a href="#" class="projects__button button">
-                        <i class="ri-arrow-right-up-line"></i>
-                     </a>
+               <div class="projects__video-wrapper">
+                  <div class="projects__video-container">
+                     <div class="projects__video-item">
+                        <video class="projects__video" muted>
+                           <source src="assets/vid/project-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="projects__content">
+                           <h3 class="projects__subtitle">IBM Cognos Dashboard</h3>
+                           <h2 class="projects__title">Current/Future Technology Trend</h2>
+                        </div>
+                     </div>
+
+                     <div class="projects__video-item">
+                        <video class="projects__video" muted>
+                           <source src="assets/vid/project-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="projects__content">
+                           <h3 class="projects__subtitle">Excel Dashboard</h3>
+                           <h2 class="projects__title">Accommodation Pricing</h2>
+                        </div>
+                     </div>
+
+                     <div class="projects__video-item">
+                        <video class="projects__video" muted>
+                           <source src="assets/vid/project-3.mp4" type="video/mp4">
+                        </video>
+                        <div class="projects__content">
+                           <h3 class="projects__subtitle">Some minimalistic work of mine</h3>
+                           <h2 class="projects__title">Other data/visualization work</h2>
+                        </div>
+                     </div>
                   </div>
-
-                  <div class="projects__content">
-                     <h3 class="projects__subtitle">App</h3>
-                     <h2 class="project__title">Fast Food App</h2>
-
-                     <p class="projects__description">
-                        Project that you carry out in the design 
-                        and structure of the layout, showing the 
-                        design at the client's request.
-                     </p>  
+                  <div class="projects__progress-bar">
+                     <div class="projects__progress-bar-inner" id="progress-bar-inner"></div>
                   </div>
-
-                  <div class="projects__buttons">
-                     <a href="https://github.com/" target="_blank" class="projects__link">
-                        <i class="ri-github-line"></i> View
-                     </a>
-
-                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                        <i class="ri-dribbble-line"></i> View
-                     </a>
-                  </div>
-               </article>
-
-               <article class="projects__card">
-                  <div class="projects__image">
-                     <img src="assets/img/project-4.jpg" alt="image" class="projects__img">
-                     
-                     <a href="#" class="projects__button button">
-                        <i class="ri-arrow-right-up-line"></i>
-                     </a>
-                  </div>
-
-                  <div class="projects__content">
-                     <h3 class="projects__subtitle">Website</h3>
-                     <h2 class="project__title">Coffee Delivery Website</h2>
-
-                     <p class="projects__description">
-                        Project that you carry out in the design 
-                        and structure of the layout, showing the 
-                        design at the client's request.
-                     </p>  
-                  </div>
-
-                  <div class="projects__buttons">
-                     <a href="https://github.com/" target="_blank" class="projects__link">
-                        <i class="ri-github-line"></i> View
-                     </a>
-
-                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                        <i class="ri-dribbble-line"></i> View
-                     </a>
-                  </div>
-               </article>
-
-               <article class="projects__card">
-                  <div class="projects__image">
-                     <img src="assets/img/project-5.jpg" alt="image" class="projects__img">
-                     
-                     <a href="#" class="projects__button button">
-                        <i class="ri-arrow-right-up-line"></i>
-                     </a>
-                  </div>
-
-                  <div class="projects__content">
-                     <h3 class="projects__subtitle">Website</h3>
-                     <h2 class="project__title">Barbershop Website</h2>
-
-                     <p class="projects__description">
-                        Project that you carry out in the design 
-                        and structure of the layout, showing the 
-                        design at the client's request.
-                     </p>  
-                  </div>
-
-                  <div class="projects__buttons">
-                     <a href="https://github.com/" target="_blank" class="projects__link">
-                        <i class="ri-github-line"></i> View
-                     </a>
-
-                     <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                        <i class="ri-dribbble-line"></i> View
-                     </a>
-                  </div>
-               </article> -->
-               
+               </div>
             </div>
          </section>
 
@@ -448,14 +402,14 @@
                   </h2>
 
                   <p class="contact__description-1">
-                     Send me your messages :">
+                     If you want to work together, have a piece of advice, a question, or simply just want to say hello, 
+                     feel free to reach out to me anytime!
                   </p>
 
                   <p class="contact__description-2">
-                     Don't forget to tell me your <b>Name</b> and <b>Email Address</b> ~
+                     Oh but don't forget to tell me your <b>Name</b> and <b>Email Address</b>.
                   </p>
 
-                  <div class="geometric-box"></div>
                </div>
 
                <div class="contact__mail">
@@ -466,8 +420,8 @@
                   <form action="" class="contact__form" id="contact-form">
                      <div class="contact__group">
                         <div class="contact__box">
-                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name">
-                           <label for="name" class="contact__label">First Name</label>
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Name">
+                           <label for="name" class="contact__label">Name</label>
                         </div>
 
                         <div class="contact__box">
@@ -488,8 +442,9 @@
 
                      <p class="contact__message" id="contact-message"></p>
 
-                     <button type="submit" class="contact__button button">
-                        <i class="ri-send-plane-line"></i> Send Message
+                     <button type="submit" class="contact__button button hover-effect">
+                        <i class="ri-send-plane-line"></i>
+                        <span>Send Message</span> 
                      </button>
                   </form>
                </div>
@@ -509,16 +464,16 @@
                      </div>
 
                      <div class="contact__social-links">
-                        <a href="https://www.linkedin.com/in/thuy-duong-dao-6781bb1b4/" target="_blank" class="contact__social-link">
-                           <i class="ri-linkedin-box-line"></i>
+                        <a href="https://www.linkedin.com/in/thuy-duong-dao-6781bb1b4/" target="_blank" class="contact__social-link hover-effect">
+                           <i class="ri-linkedin-box-fill"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/ddduong__/" target="_blank" class="contact__social-link">
-                           <i class="ri-instagram-line"></i>
+                        <a href="https://www.instagram.com/ddduong__/" target="_blank" class="contact__social-link hover-effect">
+                           <i class="ri-instagram-fill"></i>
                         </a>
 
-                        <a href="https://www.facebook.com/dudu.duong.9/" target="_blank" class="contact__social-link">
-                           <i class="ri-facebook-circle-line"></i>
+                        <a href="https://www.facebook.com/dudu.duong.9/" target="_blank" class="contact__social-link hover-effect">
+                           <i class="ri-facebook-box-fill"></i>
                         </a>
                      </div>
                   </div>
@@ -545,7 +500,7 @@
             </ul>
 
             <span class="footer__copy">
-               &#169; 2024 | By 
+               &#169; 2024 | Created & self-hosted by 
                <a href="#">Duong T. Dao.</a>
             </span>
          </div>

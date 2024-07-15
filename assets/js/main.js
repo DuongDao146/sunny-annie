@@ -140,24 +140,177 @@ sr.reveal(`.home__perfil, .about__image, .contact__mail`, {origin: 'right'})
 sr.reveal(`.home__name, .home__info,
            .about__container .section__title-1, .about__info
            .contact__social, .contact__data`, {origin: 'left'})
-sr.reveal(`.services__card, .projects__card`, {interval: 100})
+sr.reveal(`.services__card, .projects__video-wrapper`, {interval: 100})
 
 /*=============== SCROLL AUTOPLAY VIDEOS ===============*/
-document.addEventListener('DOMContentLoaded', function() {
-    const videos = document.querySelectorAll('.projects__video-bg');
+document.addEventListener('DOMContentLoaded', () => {
+    const videos = document.querySelectorAll('.projects__video');
+    const progressBarInner = document.getElementById('progress-bar-inner');
+    const nextBtn = document.getElementById('next-video');
+    const prevBtn = document.getElementById('prev-video');
+    const videoContainer = document.querySelector('.projects__video-container');
+    let currentIndex = 0;
 
-    function checkScroll() {
-        videos.forEach(video => {
-            const rect = video.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+    const updateProgressBar = () => {
+        const video = videos[currentIndex];
+        const duration = video.duration;
+        if (duration) {
+            const progress = (video.currentTime / duration) * 100;
+            progressBarInner.style.width = `${progress}%`;
+        }
+    };
+
+    const showVideo = (index) => {
+        videoContainer.style.transform = `translateX(-${index * 100}%)`;
+        videos.forEach((video, i) => {
+            if (i === index) {
+                video.currentTime = 0;
                 video.play();
             } else {
                 video.pause();
             }
         });
+    };
+
+    const nextVideo = () => {
+        currentIndex = (currentIndex + 1) % videos.length;
+        showVideo(currentIndex);
+    };
+
+    const prevVideo = () => {
+        currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+        showVideo(currentIndex);
+    };
+
+    videos.forEach((video) => {
+        video.addEventListener('timeupdate', updateProgressBar);
+        video.addEventListener('ended', nextVideo);
+    });
+
+    nextBtn.addEventListener('click', nextVideo);
+    prevBtn.addEventListener('click', prevVideo);
+
+    showVideo(currentIndex);
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                videos[currentIndex].play();
+            } else {
+                videos[currentIndex].pause();
+            }
+        });
+    });
+
+    observer.observe(document.getElementById('projects'));
+});
+
+/*=============== FADE-OUT EFFECT ===============*/
+document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.section');
+    const scrollPosition = window.scrollY;
+
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionScroll = scrollPosition - sectionTop;
+
+        if (sectionScroll > 0 && sectionScroll < sectionHeight) {
+            const opacity = 1 - sectionScroll / sectionHeight;
+            const translateX = 50 * (sectionScroll / sectionHeight); // Move 50px to left/right
+
+            section.style.opacity = opacity;
+            section.style.transform = index % 2 === 0 
+                ? `translateX(-${translateX}px)`
+                : `translateX(${translateX}px)`;
+        } else if (sectionScroll >= sectionHeight) {
+            section.style.opacity = 0;
+            section.style.transform = index % 2 === 0 
+                ? `translateX(-50px)`
+                : `translateX(50px)`;
+        } else {
+            section.style.opacity = 1;
+            section.style.transform = 'translateX(0)';
+        }
+    });
+});
+
+/*=============== EXPERIENCE TIMELINE LINES FILLING ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    const lines = document.querySelectorAll('.experience__line-inner');
+    const items = document.querySelectorAll('.experience__item');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -20% 0px', // Adjust this margin to ensure the effect is visible before reaching the bottom of the viewport
+        threshold: Array.from(Array(101).keys()).map(x => x / 100) // Create a threshold array [0, 0.01, 0.02, ..., 1]
+    };
+
+    function updateLine(entry, index) {
+        const line = lines[index];
+        const ratio = entry.intersectionRatio;
+
+        if (entry.isIntersecting) {
+            line.style.transform = `scaleY(${ratio})`;
+        } else {
+            if (entry.boundingClientRect.top < 0) {
+                // If the item is above the viewport, set it to 0
+                line.style.transform = 'scaleY(0)';
+            } else if (entry.boundingClientRect.top > 0) {
+                // If the item is below the viewport, set it to 0
+                line.style.transform = 'scaleY(0)';
+            }
+        }
     }
 
-    window.addEventListener('scroll', checkScroll);
-    window.addEventListener('resize', checkScroll);
-    checkScroll(); // Initial check
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const index = Array.from(items).indexOf(entry.target);
+            if (index !== -1) {
+                updateLine(entry, index);
+            }
+        });
+    }, observerOptions);
+
+    items.forEach(item => observer.observe(item));
 });
+
+/*=============== SERVICES TRANSITION ===============*/
+document.querySelectorAll('.service__title-wrapper').forEach(item => {
+    item.addEventListener('mouseover', function() {
+        const targetClass = this.getAttribute('data-target');
+        document.querySelectorAll('.service__content').forEach(div => {
+            div.classList.remove('active');
+        });
+        document.querySelector('.' + targetClass).classList.add('active');
+        document.querySelectorAll('.service__title-wrapper').forEach(wrapper => {
+            wrapper.classList.remove('active-service');
+        });
+        this.classList.add('active-service');
+    });
+});
+
+// Initial default display
+document.querySelector('.service1').classList.add('active');
+document.querySelector('[data-target="service1"]').classList.add('active-service');
+
+/*=============== FOLLOW POINTER HOVER EFFECT ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    addHoverFollowEffect('.hover-effect');
+});
+
+function addHoverFollowEffect(selector) {
+    document.querySelectorAll(selector).forEach(item => {
+        item.addEventListener('mousemove', function(e) {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            item.style.transform = `translate(${(x - rect.width / 2) * 0.3}px, ${(y - rect.height / 2) * 0.3}px)`;
+        });
+
+        item.addEventListener('mouseleave', function() {
+            item.style.transform = ''; // Reset transform to initial state
+        });
+    });
+}
